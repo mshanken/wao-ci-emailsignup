@@ -1,0 +1,26 @@
+{
+  "name": "WSsignup",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mshanken/WSsignup",
+  "description": "signn up pages",
+  "main": "web/index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "authors": [
+    "Edison A. Leon"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "jquery-validation": "~1.13.1"
+  }
+}

@@ -1,0 +1,60 @@
+.lead { background: #e0670b; padding: 20px 0 25px; }
+.lead h1{ text-align: center; color: #fff; font-weight: 400; font-size: 120% }
+.lead h1 span{ font-size: 180%; }
+h3, .row-one label {font-size: 20px; font-weight: normal; }
+h3 span { color: #9e0039; }
+.row-two hr { border-top:2px solid #e0670b;  }
+.row-four strong { font-size: 16px; }
+.row-four { line-height: normal; }
+.btn{ background: #e0670b; color: #ffffff; padding: 2px 20px; margin:10px 0 20px; font-style: 16px; border-radius:1px; }
+.btn:hover, .btn:focus{ color:#cecece;}
+.btnbs {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.btnbig{ background: #e0670b font-size: 20px; padding: 10px 45px; margin: 0; }
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #e0670b;
+  border-color: #fff;
+}
+.form-control-feedback {
+  display: none;
+}
+.has-feedback label~.form-control-feedback {
+  top: 37px;
+}
+hr{ margin-top: 1px; }
+#CI_email-error, #CI_custom1-error, #CI_custom2-error{ color:#a94442; }
+.addmarginbottom{ margin-bottom: 50px; }
+@media (min-width: 768px) {}
+@media (min-width: 992px) {
+    .lead h1{ font-size: 36px; }
+    h3, .row-one label { font-size: 25px; }
+}
+@media (min-width: 1200px) {
+    .lead h1{ font-size: 36px; }
+    h3, .row-one label { font-size: 25px; }
+}
