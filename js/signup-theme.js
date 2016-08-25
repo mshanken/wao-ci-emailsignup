@@ -1,10 +1,21 @@
 $(function () {
 	$("#CI_subscribeForm").validate({
+		ignore: '.ignore',
 		rules: {
 			CI_email:{email:true},
             CI_custom7: {
                 required: function(element) {
                     return $("#othersel").is(":selected");
+                }
+            },
+            hiddenRecaptcha: {
+                required: function () {
+                    $('.g-recaptcha').removeClass('hidden');
+                    if (grecaptcha.getResponse() == '') {
+                        return true;
+                    } else {
+                        return false;
+                    }
                 }
             }
 		},
