@@ -58,3 +58,10 @@ hr{ margin-top: 1px; }
     .lead h1{ font-size: 36px; }
     h3, .row-one label { font-size: 25px; }
 }
+.checkbox-item {
+    font-size: 21px;
+    color: #999;
+}
+.checkbox-item.glyphicon-check {
+    color: #3b99fc;
+}
