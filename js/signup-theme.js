@@ -67,4 +67,12 @@ $(function () {
         }
     } );
 
+    $( "input[type=checkbox]" ).change(function() {
+        if( $(this).prop('checked') ){
+            $(this).prev().removeClass('glyphicon-unchecked').addClass('glyphicon-check');
+        } else {
+            $(this).prev().removeClass('glyphicon-check').addClass('glyphicon-unchecked');
+        }
+    });
+
 });
