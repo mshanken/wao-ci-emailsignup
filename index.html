@@ -33,7 +33,7 @@
 
         </script>
         <!-- End UA code -->
-        <script src='https://www.google.com/recaptcha/api.js'></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
     </head>
     <body>
         <div class="container">
@@ -48,10 +48,11 @@
                 <input type="hidden" name="CI_err" value="http://newsletters.mshanken.com/wc/error.cfm">
                 <input type="hidden" name="CI_Action" value="sub">
                 <input type="hidden" name="CI_LID" value="2602837156">
-                <input type="hidden" name="CI_MID" value="146485141">
-
+                
+                <input type="hidden" name="CI_FID" value="a457a3931274584b">
+                <input type="hidden" name="CI_MID" value="146509213">
+                
                 <input type="hidden" name="CI_FID2" value="1000JTE00000000014X">
-
                 <input type="hidden" name="CI_triggeredid" value="773993034">
 
                 <div class="row row-one">
@@ -136,8 +137,8 @@
                 <div class="row">
                     <div class="col-xs-12 text-center">
                         <br />
-                        <div class="g-recaptcha hidden" data-sitekey="6LdOeSgTAAAAAKY4UL02_wbuIyeywFH--TCPhGrn" style="width:304px; margin: 10px auto 0;"></div>
-                        <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+                        <div class="g-recaptcha" data-sitekey="6LcNcgsUAAAAAJrF307H_oCEzYub8hkGI5sWVxOB" data-callback="ciEnableSubmitButton" style="width:304px; margin: 10px auto 0;"></div>
+                        <!-- <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha"> -->
                         <span id="inputError2Status" class="sr-only">(error)</span>
                     </div>
                 </div><!-- /.row -->
@@ -145,7 +146,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8"><br />
-                        <p class="text-center"><input id="CI_submit" name="CI_submit" type="submit" value="Submit" class="btn btnbig"></p>
+                        <p class="text-center"><input id="CI_submit" name="CI_submit" type="submit" value="Submit" class="btn btnbig" disabled></p>
                         <p class="text-center">By clicking Submit, I will receive a free email subscription to WhiskyNotes,<br />as well as special email promotions from Whisky Advocate.</p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
@@ -170,5 +171,17 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.validate.min.js"></script>
         <script src="js/signup-theme.js"></script>
+        <script>
+            var l_submit_confirmation_status = true;
+            var l_recaptcha_status = false;
+            function ciEnableSubmitButton(code) {
+                if(code != '') {
+                    l_recaptcha_status = true;
+                    if (l_submit_confirmation_status && l_recaptcha_status) {
+                        document.getElementById('CI_submit').removeAttribute('disabled');
+                    }
+                }
+            }
+        </script>
     </body>
 </html>
