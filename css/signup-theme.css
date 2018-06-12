@@ -66,3 +66,7 @@ label.form-check-label{ font-size: 18px; }
 .checkbox-item.glyphicon-check {
     color: #3b99fc;
 }
+#GDPRContent.form-check {
+  margin-top: 20px;
+  margin-left: 30px;
+}
