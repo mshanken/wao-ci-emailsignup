@@ -65,4 +65,12 @@ $(function () {
         }
     });
 
+    $( "#proactive_agree_to_receive_emails" ).change(function() {
+        if( $(this).prop('checked') ){
+            $("#GDPRContent").removeClass('hidden');
+        } else {
+            $('#GDPRContent').addClass('hidden');
+        }
+    });
+
 });
