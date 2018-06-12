@@ -65,10 +65,14 @@ $(function () {
         }
     });
 
-    $( "#proactive_agree_to_receive_emails" ).change(function() {
+    $( "#CI_custom25" ).change(function() {
         if( $(this).prop('checked') ){
+        	$('#CI_subscribeForm').attr('action','//newsletters.mshanken.com/wc/wc7_verify.cfm');
+        	$(this).val('Y');
             $("#GDPRContent").removeClass('hidden');
         } else {
+        	$('#CI_subscribeForm').attr('action','//newsletters.mshanken.com/wc/wc_verify.cfm');
+        	$(this).val('N');
             $('#GDPRContent').addClass('hidden');
         }
     });
