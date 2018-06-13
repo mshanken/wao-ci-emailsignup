@@ -47,7 +47,8 @@ h3 span { color: #9e0039; }
   top: 37px;
 }
 hr{ margin-top: 1px; }
-#CI_email-error, #CI_custom1-error, #CI_custom2-error, #hiddenRecaptcha-error, #CI_proactive_agree_to_receive_emails-error{ color:#a94442; }
+#CI_email-error, #CI_custom1-error, #CI_custom2-error, #hiddenRecaptcha-error, .error, .has-error span{ color:#a94442; }
+.form-check-label em.error{ font-size: 12px; }
 .addmarginbottom{ margin-bottom: 50px; }
 @media (min-width: 768px) {}
 @media (min-width: 992px) {
