@@ -72,12 +72,12 @@ $(function () {
 
     $( "#CI_custom25" ).change(function() {
         if( $(this).prop('checked') ){
-        	$('#CI_subscribeForm').attr('action','//newsletters.mshanken.com/wc/wc7_verify.cfm');
+        	$('#CI_subscribeForm').attr('action','//portal.mshanken.com/wc/wc7_verify.cfm');
         	$(this).val('Y');
         	// $('#CI_pproactive_agree_to_receive_emails').attr('required','required');
             $("#GDPRContent").removeClass('hidden');
         } else {
-        	$('#CI_subscribeForm').attr('action','//newsletters.mshanken.com/wc/wc_verify.cfm');
+        	$('#CI_subscribeForm').attr('action','//portal.mshanken.com/wc/wc_verify.cfm');
         	$(this).val('N');
         	// $('#CI_pproactive_agree_to_receive_emails').prop('required',false);
             $('#GDPRContent').addClass('hidden');
