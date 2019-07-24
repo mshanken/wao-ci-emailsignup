@@ -3,6 +3,7 @@
 .lead h1 span{ font-size: 180%; }
 h3, .row-one label {font-size: 20px; font-weight: normal; }
 h3 span { color: #9e0039; }
+.row-two label, .checkbox label { font-size: 18px; }
 .row-two hr { border-top:2px solid #e0670b;  }
 .row-four strong { font-size: 16px; }
 .row-four { line-height: normal; }
