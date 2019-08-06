@@ -1,8 +1,8 @@
 'use strict';
 
 function populate() {
-    var checkboxes = document.getElementsByName('CI_custom29');
-    var ip1 = document.getElementById('CI_custom29');
+    var checkboxes = document.getElementsByName('ci_custom29');
+    var ip1 = document.getElementById('ci_custom29');
 
     ip1.value = '';
 
@@ -20,6 +20,7 @@ function populate() {
 
 $(function () {
 	$("#CI_subscribeForm").validate({
+		debug: true,
 		ignore: '.ignore',
 		rules: {
 			CI_email:{email:true},
@@ -42,7 +43,7 @@ $(function () {
 		validClass: "success",
 		errorClass: "error",
 		errorElement:"em",
-		submitHandler: function(form) { form.submit(); },
+		submitHandler: function(form) { /*  */form.submit();console.log(form); },
 		success: function(label, element){
 			// console.log( "test2: ", label, element );
 			var _this = ($(element).hasClass('form-check-input'))?$(element).parent().parent():$(element).parent();
