@@ -43,7 +43,7 @@ $(function () {
 		validClass: "success",
 		errorClass: "error",
 		errorElement:"em",
-		submitHandler: function(form) { /*  */form.submit();console.log(form); },
+		submitHandler: function(form) { form.submit(); },
 		success: function(label, element){
 			// console.log( "test2: ", label, element );
 			var _this = ($(element).hasClass('form-check-input'))?$(element).parent().parent():$(element).parent();
