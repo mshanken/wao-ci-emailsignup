@@ -38,7 +38,12 @@ $(function () {
             	required: function(element) {
             		return $("#CI_custom25").is(":checked");
 			    }
-            }
+            },
+            CI_LID: {
+		      	required: function(element) {
+		      		return $("#2602837156").is(":checked")||$("#7353876643").is(":checked")||$("#4787470453").is(":checked")||$("#7052535323").is(":checked")||$("#4787500543").is(":checked")||$("#4787480483").is(":checked");
+			    }
+		    }
 		},
 		validClass: "success",
 		errorClass: "error",
@@ -54,7 +59,7 @@ $(function () {
 			}
 		},
 		invalidHandler: function(event, validator){
-			// console.log("test:", validator, event, validator.invalid);
+			console.log("test:", validator, event, validator.invalid);
 			$.each( validator.invalid, function( key, value ) {
 				// console.log( key + ": " + value );
 				var _this = ($("#"+key).hasClass('form-check-input'))?$("#"+key).parent().parent():$("#"+key).parent();
