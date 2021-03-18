@@ -39,10 +39,9 @@ $(function () {
             		return $("#CI_custom25").is(":checked");
 			    }
             },
-            CI_LID: {
-		      	required: function(element) {
-		      		return $("#2602837156").is(":checked")||$("#7353876643").is(":checked")||$("#4787470453").is(":checked")||$("#7052535323").is(":checked")||$("#4787500543").is(":checked")||$("#4787480483").is(":checked");
-			    }
+            CI_LID: { 
+                required: true, 
+                minlength: 1
 		    }
 		},
 		validClass: "success",
