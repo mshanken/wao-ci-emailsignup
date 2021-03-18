@@ -38,7 +38,11 @@ $(function () {
             	required: function(element) {
             		return $("#CI_custom25").is(":checked");
 			    }
-            }
+            },
+            CI_LID: { 
+                required: true, 
+                minlength: 1
+		    }
 		},
 		validClass: "success",
 		errorClass: "error",
@@ -54,7 +58,7 @@ $(function () {
 			}
 		},
 		invalidHandler: function(event, validator){
-			// console.log("test:", validator, event, validator.invalid);
+			console.log("test:", validator, event, validator.invalid);
 			$.each( validator.invalid, function( key, value ) {
 				// console.log( key + ": " + value );
 				var _this = ($("#"+key).hasClass('form-check-input'))?$("#"+key).parent().parent():$("#"+key).parent();
