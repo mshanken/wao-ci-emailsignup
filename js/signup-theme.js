@@ -44,6 +44,12 @@ $(function () {
                 minlength: 1
 		    }
 		},
+		messages: {
+		    CI_LID: {
+		      required: "You must select at least one newsletter",
+		      minlength: jQuery.validator.format("At least {0} newsletter required!")
+		    }
+		},
 		validClass: "success",
 		errorClass: "error",
 		errorElement:"em",
@@ -51,6 +57,10 @@ $(function () {
 		success: function(label, element){
 			// console.log( "test2: ", label, element );
 			var _this = ($(element).hasClass('form-check-input'))?$(element).parent().parent():$(element).parent();
+			// console.log($(element).attr('name'));
+			if( $(element).attr('name') === 'CI_LID' ) {
+				_this = $("input[name=CI_LID]").parent().parent();
+			}
 			if( $(_this).hasClass("has-error") ){
 				$(_this).removeClass("has-error").addClass("has-success");
 				$(_this).find("span.glyphicon").removeClass("glyphicon-remove").addClass("glyphicon-ok");
@@ -58,10 +68,14 @@ $(function () {
 			}
 		},
 		invalidHandler: function(event, validator){
-			console.log("test:", validator, event, validator.invalid);
+			// console.log("test:", validator, event, validator.invalid);
 			$.each( validator.invalid, function( key, value ) {
 				// console.log( key + ": " + value );
 				var _this = ($("#"+key).hasClass('form-check-input'))?$("#"+key).parent().parent():$("#"+key).parent();
+				// console.log(_this);
+				if( !(_this.length) ) {
+					_this = $("input[name=CI_LID]").parent().parent()
+				}
 				$(_this).addClass("has-success");
 				$(_this).addClass("has-error has-feedback");
 				$(_this).find(".form-control-feedback").css("display","block");
@@ -114,7 +128,7 @@ $(function () {
         }
     });
 
-    // check for Whisky interesr -- can not select more than 5 types
+    // check for Whisky interest -- can not select more than 5 types
 	/*
 	 * For checkboxes instead, if use anyway
 	 */
