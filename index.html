@@ -32,6 +32,13 @@
           ga('send', {"hitType":"pageview","page":"/criticalimpact/optin/form","title":"Critical impact optin form","dimension1":"criticalimpact"});
 
         </script>
+        <style type="text/css">
+            .forCI_CLID #CI_LID-error.error{
+                display: block;
+                position: absolute;
+                top: -20px;
+            }
+        </style>
         <!-- End UA code -->
         <script src="https://www.google.com/recaptcha/api.js"></script>
     </head>
@@ -39,7 +46,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <img src="images/whisky-notes-signup-header.jpg" class="img-responsive center-block" />
+                    <img src="images/whisky-NLs-signup-header.jpg" class="img-responsive center-block" alt="Whisky Advocate Newsletters" />
                 </div>
             </div><!-- /.row --><br><br>
             <form action="//portal.mshanken.com/wc/wc_verify.cfm" name="CI_subscribeForm" id="CI_subscribeForm" method="post">
@@ -47,7 +54,7 @@
                 <input type="hidden" name="CI_thankyou2" value="//newsletters.whiskyadvocate.com/thankyou.html">
                 <input type="hidden" name="CI_err" value="//portal.mshanken.com/wc/error.cfm">
                 <input type="hidden" name="CI_Action" value="sub">
-                <input type="hidden" name="CI_LID" value="2602837156">
+                <!-- <input type="hidden" name="CI_LID" value="2602837156"> -->
                 
                 <input type="hidden" name="CI_FID" value="a457a3931274584b">
                 <input type="hidden" name="CI_MID" value="146485141">
@@ -58,6 +65,36 @@
                 <div class="row row-one">
                     <div class="col-xs-12 col-sm-12 col-md-1"></div><!-- empaty column -->
                     <div class="col-xs-12 col-sm-12 col-md-10">
+                        <div class="row forCI_CLID">
+                            <div class="col-sm-6">
+                                <div class="form-check">
+                                  <label class="control-label form-check-label">
+                                    <span class="checkbox-item glyphicon glyphicon-unchecked" aria-hidden="true" title="WhiskyNotes - Sent twice a month"></span><input class="form-check-input hidden" type="checkbox" name="CI_LID" id="2602837156" value="2602837156">
+                                    <label>WhiskyNotes</label>
+                                    <p style="padding-left: 30px;"><span style="font-weight:300; font-weight: 16px">Sent twice a month</span><br>
+                                    Whisky Advocate's WhiskyNotes
+                                    newsletter keeps you in the loop
+                                    on the latest whisky releases,
+                                    ratings, and more! <a href="/images/WhiskyNotesSample.pdf" target="_blank" title="View Sample: ">View Sample.</a></p>
+                                  </label>
+                                </div><!-- /.form-group -->
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-check">
+                                  <label class="control-label form-check-label">
+                                    <span class="checkbox-item glyphicon glyphicon-unchecked" aria-hidden="true" title="Cocktail Club - Sent once a month"></span><input class="form-check-input hidden" type="checkbox" name="CI_LID" id="7353876643" value="7353876643">
+                                    <label>Cocktail Club</label>
+                                    <p style="padding-left: 30px;"><span style="font-weight:300; font-weight: 16px">Sent once a month</span><br>
+                                    Whisk Advocate's Cocktails Club
+                                    newsletter is for whisky lovers
+                                    and cocktail enthusiasts alike.
+                                    Enjoy classic and uniquue cocktail
+                                    recipes, videos and more.
+                                    <a href="/images/WhiskyAdvocateCocktailClub.pdf" target="_blank" title="View Sample: Cocktail Club">View Sample.</a></p>
+                                  </label>
+                                </div><!-- /.form-group -->
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label class="control-label" for="CI_email">Email</label>
                             <input type="email" name="CI_email" class="form-control required" id="CI_email" placeholder="Email" maxlength="150" />
@@ -161,7 +198,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8"><br />
                         <p class="text-center"><input id="CI_submit" name="CI_submit" type="submit" value="Submit" class="btn btnbig" disabled></p>
-                        <p class="text-center">By clicking Submit, I will receive a free email subscription to WhiskyNotes,<br />as well as special email promotions from Whisky Advocate.</p>
+                        <p class="text-center">I agree to receive any checked newsletter(s) above, plus occasional news<br>and offers from Whisky Advocate. I can unsubscribe at any time.</p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
                 </div><!-- /.row -->
@@ -170,8 +207,8 @@
                     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                         <hr />
-                        <p class="text-center"><img src="images/WhiskyNotesThumb300x309.jpg" class="img-responsive center-block" />
-                        <a href="images/WhiskyNotesSample2018.pdf" class="btn" target="_blank">View Sample</a></p>
+                        <!-- <p class="text-center"><img src="images/WhiskyNotesThumb300x309.jpg" class="img-responsive center-block" />
+                        <a href="images/WhiskyNotesSample2018.pdf" class="btn" target="_blank">View Sample</a></p> -->
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
                 </div><!-- /.row -->
